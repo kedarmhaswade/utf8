@@ -2,7 +2,7 @@ UTF-8 Helper
 ------------
 
 I am sure you love and use at least one of the world's amazing writing systems.
-For example, I am sure you are intrigued by how the computer terminals, various
+I am sure you are intrigued by how the computer terminals, various
 applications, web browsers displayed those math symbols, those curvy characters
 from eastern scripts. At least I am.
 
@@ -59,6 +59,7 @@ $ utf8 summation
 $ utf8 chess white king
 ♔ = 2654 (white chess king)
 $ utf8 music note eight
+
 𝅘𝅥𝅮 = 1D160 (musical symbol eighth note)
 𝅘𝅥𝅲 = 1D164 (musical symbol one hundred twenty-eighth note)
 ...
@@ -68,7 +69,7 @@ That's right. You just provide as many "approximate" keywords pertaining
 to the "character" you are looking for and you get the UTF-8 for it.
 The applications are aplenty. You can then take the hex code that it
 prints and put it on a web page as a direct entity reference to enliven
-your webpages. (e.g. &#x2140 would display ⅀ on your webpage).
+your webpages. (e.g. &#x2140; would display ⅀ on your webpage).
 
 Of course there are many webpages that show this information. But
 I needed a command line utility and now I've got one!
