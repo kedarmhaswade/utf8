@@ -69,7 +69,8 @@ That's right. You just provide as many "approximate" keywords pertaining
 to the "character" you are looking for and you get the UTF-8 for it.
 The applications are aplenty. You can then take the hex code that it
 prints and put it on a web page as a direct entity reference to enliven
-your webpages. (e.g. &#x2140; would display ⅀ on your webpage).
+your webpages. (e.g. &#x2140 followed by ; i.e & # x 2 1 4 0 ; (without any intervening spaces)
+ would display ⅀ on your webpage).
 
 Of course there are many webpages that show this information. But
 I needed a command line utility and now I've got one!
