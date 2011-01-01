@@ -59,8 +59,8 @@ $ utf8 summation
 $ utf8 chess white king
 ♔ = 2654 (white chess king)
 $ utf8 music note eight
-𝅘𝅥𝅮 = 1D160 (musical symbol eighth note)
-𝅘𝅥𝅲 = 1D164 (musical symbol one hundred twenty-eighth note)
+𝅘𝅥𝅮 = 1D160 (musical symbol eighth note)
+𝅘𝅥𝅲 = 1D164 (musical symbol one hundred twenty-eighth note)
 ...
 </pre>
 
@@ -75,3 +75,4 @@ I needed a command line utility and now I've got one!
 
 Enjoy.
 Happy utf-8ing.
+(A minor annoyance is that you need to have the "fonts" installed that display the glyphs associated with these "real characters". But that's just a Google search away -- Google: Install Unicode Font on Linux.
