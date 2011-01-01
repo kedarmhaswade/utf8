@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+require 'open-uri'
+
+# encoding: utf-8
+def debug(s)
+  puts "debug: " + s if $DEBUG
+end
+if ARGV.size == 0
+  puts "Usage: #{$0} <search strings as separate arguments>"
+  exit(1)
+end
+data_file_dir_path = File.dirname(File.dirname(__FILE__))
+data_file_name = data_file_dir_path + "/UnicodeData.txt";
+url = "http://www.unicode.org/Public/UNIDATA/UnicodeData.txt"
+unless File.exists?(data_file_name)
+  data_file = File.open(data_file_name, "w")
+  debug("Downloading #{url}")
+  open(url, "r").readlines.each{|l| data_file.puts l}
+  data_file.close
+end
+if File.size(data_file_name) == 0
+  puts "\tThe unicode data file at: #{url} could not be dowloaded.\n\
+\t(The downloaded file is zero-byte.\n\
+\tManually download (save) the file and rerun.\n"
+  File.delete(data_file_name)
+  exit(2)
+end
+File.open(data_file_name, "r") do |file|
+  file.readlines.each do |line|
+    parts = line.split(/;/)
+    code = parts[0]
+    desc = parts[1].downcase if parts[1]
+    if desc
+      result = true
+      ARGV.each {|arg| result &&= desc.match(arg) } 
+      utf8_char = code.to_i(16).chr(Encoding::UTF_8)
+      puts "#{utf8_char} = #{code} (#{desc})" if result 
+    end 
+  end
+end
+
