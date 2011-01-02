@@ -16,11 +16,12 @@ adopted it.
 
 That means I need a "Unix utility" to quickly tell me the most popular
 enconding (UTF-8) of the unicode code points of all characters whose
-<b> approximate names </b> we know!
+<b> approximate names </b> I know!
 
 If you had been looking for something like that, your search is over. All you
-need is a Ruby interpreter and this script named "utf8". Here are some of the
-example outputs that you'd appreciate:
+need is a Ruby interpreter and this script named "utf8". Here is how you could
+use it:
+
 <pre>
 $ utf8 integral
 ∫ = 222B (integral)
@@ -66,7 +67,10 @@ $ utf8 music note eight
 </pre>
 
 That's right. You just provide as many "approximate" keywords pertaining
-to the "character" you are looking for and you get the UTF-8 for it.
+to the "character" you are looking for and you get the unicode code point for it.
+The characters are printed on the terminal using utf-8 encoding and displayed
+correctly if you have a unicode font installed.
+
 The applications are aplenty. You can then take the hex code that it
 prints and put it on a web page as a direct entity reference to enliven
 your webpages. (e.g. &#x2140 followed by ; i.e & # x 2 1 4 0 ; (without any intervening spaces)
