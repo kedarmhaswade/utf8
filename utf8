@@ -32,7 +32,7 @@ File.open(data_file_name, "r") do |file|
     desc = parts[1].downcase if parts[1]
     if desc
       result = true
-      ARGV.each {|arg| result &&= desc.match(arg) } 
+      ARGV.each {|arg| result &&= desc.match(arg.downcase) } 
       utf8_char = code.to_i(16).chr(Encoding::UTF_8)
       puts "#{utf8_char} = #{code} (#{desc})" if result 
     end 
