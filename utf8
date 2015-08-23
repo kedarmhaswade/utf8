@@ -28,13 +28,15 @@ end
 File.open(data_file_name, "r") do |file|
   file.readlines.each do |line|
     parts = line.split(/;/)
-    code = parts[0]
+    code = parts[0].strip
     desc = parts[1].downcase if parts[1]
     if desc
       result = true
       ARGV.each {|arg| result &&= desc.match(arg.downcase) } 
-      utf8_char = code.to_i(16).chr(Encoding::UTF_8)
-      puts "#{utf8_char} = #{code} (#{desc})" if result 
+      if result
+        utf8_char = code.to_i(16).chr(Encoding::UTF_8)
+        puts "#{utf8_char} = #{code} (#{desc})"
+      end
     end 
   end
 end
