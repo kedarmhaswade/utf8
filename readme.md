@@ -74,11 +74,13 @@ correctly if you have a unicode font installed.
 The applications are aplenty. You can then take the hex code that it
 prints and put it on a web page as a direct entity reference to enliven
 your webpages. (e.g. &#x2140 followed by ; i.e & # x 2 1 4 0 ; (without any intervening spaces)
- would display ⅀ on your webpage).
+ would display ⅀ on your webpage. Alternatively, on Mac, you can add the U+ keyboard and enter
+a Unicode codepoint by keeping the Alt key pressed, on Linux, you can enter the Unicode codepoint
+after Ctrl+Shift+U).
 
 Of course there are many webpages that show this information. But
 I needed a command line utility and now I've got one!
 
 Enjoy.
 Happy utf-8ing.
-(A minor annoyance is that you need to have the "fonts" installed that display the glyphs associated with these "real characters". But that's just a Google search away -- Google: Install Unicode Font on Linux.
+(A minor annoyance is that you need to have the "fonts" installed that display the glyphs associated with these "real characters". But that's just a Google search away -- Google: Install Unicode Font on Linux.)
